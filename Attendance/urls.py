@@ -24,7 +24,8 @@ urlpatterns = [
     path('', include('students.urls')),
     path('admin/', admin.site.urls),
     #  url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    url('static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    # C:\Users\Sanket\Downloads\Attendance\Attendance\static
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
